@@ -1,4 +1,5 @@
-import Link from 'next/link'
+import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Home() {
   const projects = [
@@ -20,7 +21,7 @@ export default function Home() {
       description: "Productivity app with real-time collaboration",
       tags: ["Firebase", "React", "Material UI"]
     }
-  ]
+  ];
 
   return (
     <div className="space-y-20">
@@ -28,7 +29,7 @@ export default function Home() {
       <section className="min-h-[80vh] flex items-center bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="container mx-auto px-6 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-gray-800">
-            Hi I am <span className="text-blue-600">kevin Rugero</span>
+            Hi I am <span className="text-blue-600">Kevin Rugero</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
             A passionate web developer creating modern, responsive websites and applications
@@ -100,22 +101,25 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="md:w-1/2">
-              <img 
+              <Image 
                 src="/kv.jpg" 
                 alt="Profile" 
-                className="rounded-full object-cover border-2 border-white"></img>
+                width={400}
+                height={400}
+                className="rounded-full object-cover border-2 border-white"
+              />
             </div>
             <div className="md:w-1/2">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 About <span className="text-blue-600">Me</span>
               </h2>
               <p className="text-gray-600 mb-4 text-lg">
-                I'm a full-stack developer with 5+ years of experience building web applications. 
+                {"I'm a full-stack developer with 5+ years of experience building web applications."} 
                 I specialize in modern JavaScript frameworks and have a passion for creating 
                 intuitive user experiences.
               </p>
               <p className="text-gray-600 mb-6 text-lg">
-                When I'm not coding, you can find me hiking, reading sci-fi novels, or 
+                {"When I'm not coding, you can find me hiking, reading sci-fi novels, or"} 
                 experimenting with new recipes in the kitchen.
               </p>
               <div className="flex flex-wrap gap-4">
@@ -193,10 +197,10 @@ export default function Home() {
           <div className="mt-12 text-center">
             <p className="text-gray-600 mb-4">Or contact me directly at:</p>
             <div className="flex flex-wrap justify-center gap-6">
-              <a href="mailto:hello@example.com" className="text-blue-600 hover:underline">
+              <a href="mailto:munezerokevin70@gmail.com" className="text-blue-600 hover:underline">
                 munezerokevin70@gmail.com
               </a>
-              <a href="tel:+1234567890" className="text-blue-600 hover:underline">
+              <a href="tel:+250798415473" className="text-blue-600 hover:underline">
                 +250798415473
               </a>
             </div>
@@ -204,5 +208,5 @@ export default function Home() {
         </div>
       </section>
     </div>
-  )
+  );
 }
